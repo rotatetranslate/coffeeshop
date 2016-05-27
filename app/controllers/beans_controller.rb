@@ -1,4 +1,5 @@
 class BeansController < ApplicationController
+
   def index
     @beans = Bean.all
   end
@@ -20,4 +21,26 @@ class BeansController < ApplicationController
       render :new
     end
   end
+
+# identical to show method
+  def edit
+    @bean = Bean.find(params[:id])
+  end
+
+  def update
+    @bean = Bean.find(params[:id])
+
+    if @bean.update_attributes(params.require(:bean).permit(:name, :roast, :origin, :quantity))
+      redirect_to beans_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @bean = Bean.find(params[:id])
+    @bean.destroy
+    redirect_to beans_path
+  end
+
 end
