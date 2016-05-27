@@ -10,4 +10,14 @@ class BeansController < ApplicationController
   def new
     @bean = Bean.new
   end
+
+  def create
+    @bean = Bean.new(params.require(:bean).permit(:name, :roast, :origin, :quantity))
+
+    if @bean.save
+      redirect_to beans_path
+    else
+      render :new
+    end
+  end
 end

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: "beans#index"
   # new must be above show - order is v important!
   get "beans/new", to: "beans#new", as: :new_bean
-
+  post "beans", to: "beans#create"
   get "beans/:id", to: "beans#show", as: :bean
 
 
