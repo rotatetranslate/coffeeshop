@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+#######################
+## rails c --sandbox ##
+#######################
+
+beans = Bean.create([
+    {name: "Jim's Jittery Java", roast: "medium", origin: "The OC Baby!", quantity: 102.4},
+    {name: "Phil's FDA-Banned Brew", roast: "hella dark", origin: "Cleveland, OH", quantity: 101.3}
+  ])
