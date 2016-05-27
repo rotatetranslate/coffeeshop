@@ -4,6 +4,8 @@
 <%= @bean.origin %>, and we have
 <%= @bean.quantity %> pounds available.</p>
 
+<%= link_to "Edit this bean!", edit_bean_path(@bean) %>
+<br>
 <%= link_to "Delete that bean!", bean_path, method: :delete,
  data: { confirm: "Are u really really gonna delete dat bean?" } %>
 <br>
