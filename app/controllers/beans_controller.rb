@@ -5,6 +5,9 @@ class BeansController < ApplicationController
 
   def show
     @bean = Bean.find(params[:id])
+  end
 
+  def new
+    @bean = Bean.new
   end
 end

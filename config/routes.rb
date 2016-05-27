@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   get "beans", to: "beans#index"
 
   root to: "beans#index"
+  # new must be above show - order is v important!
+  get "beans/new", to: "beans#new", as: :new_bean
 
   get "beans/:id", to: "beans#show", as: :bean
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
