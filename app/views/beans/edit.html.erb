@@ -23,6 +23,9 @@
   </div>
 
   <%= f.submit "Submit your bean changes!" %>
+<br>
+  <%= link_to "Delete that bean!", bean_path, method: :delete,
+ data: { confirm: "Are u really really gonna delete dat bean?" } %>
 
 <% end %>
 
