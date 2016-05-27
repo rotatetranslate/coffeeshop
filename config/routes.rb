@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get "beans", to: "beans#index"
 
-  root to: "beans#index"
+  root "beans#index"
   # new must be above show - order is v important!
-  get "beans/new", to: "beans#new", as: :new_bean
-  get "beans/:id/edit", to: "beans#edit", as: :edit_bean
-  get "beans/:id", to: "beans#show", as: :bean
-  post "beans", to: "beans#create"
-  patch "beans/:id", to: "beans#update"
-  delete "beans/:id", to: "beans#destroy"
+  # get "beans", to: "beans#index"
+  # get "beans/new", to: "beans#new", as: :new_bean
+  # get "beans/:id/edit", to: "beans#edit", as: :edit_bean
+  # get "beans/:id", to: "beans#show", as: :bean
+  # post "beans", to: "beans#create"
+  # patch "beans/:id", to: "beans#update"
+  # delete "beans/:id", to: "beans#destroy"
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
@@ -22,7 +22,9 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+    resources :beans
+
+    ##RESOURCES O SHIT WADDUPPP!!!##
 
   # Example resource route with options:
   #   resources :products do
